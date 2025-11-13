@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПРОФЕССИОНАЛЬНЫЙ Дизайн Превью — СВЕТЛАЯ ТЕМА 2.0</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение шрифта Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Иконки Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Общие стили и шрифт для СВЕТЛОЙ ТЕМЫ */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfd; /* Еще более светлый фон */
+            color: #181824; /* Почти черный текст */
+            scroll-behavior: smooth;
+        }
+
+        /* Стиль для главного акцента (ФИОЛЕТОВО-ИНДИГОВЫЙ ГРАДИЕНТ) */
+        .accent-gradient {
+            /* Яркий Индиго/Фиолетовый градиент */
+            background-image: linear-gradient(to right, #8b5cf6, #6366f1); /* Violet-500 to Indigo-500 */
+            transition: all 0.3s ease;
+            color: white; /* Текст на кнопке всегда белый */
+        }
+        .accent-gradient:hover {
+            background-image: linear-gradient(to right, #6366f1, #8b5cf6); /* Смена направления */
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.5); /* Фиолетовая тень */
+            transform: scale(1.03);
+        }
+        
+        /* Стилизация карточек портфолио */
+        .portfolio-card {
+            background: #ffffff; /* Белый фон */
+            border: 1px solid #e0e0f0; /* Очень светлая рамка */ 
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05); /* Мягкая и глубокая тень */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .portfolio-card:hover {
+            transform: translateY(-8px); 
+            border-color: #8b5cf6; /* Фиолетовая рамка */
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.15); /* Фиолетовая тень */
+        }
+
+        /* Стили для Hero-секции (Светлый, чистый фон) */
+        #hero-section {
+            /* Легкий геометрический паттерн на супер-светлом фоне */
+            background-image: linear-gradient(rgba(252, 252, 253, 0.98), rgba(252, 252, 253, 1)), url('https://placehold.co/1920x1080/fcfcfd/8b5cf6?text=Minimal+Violet+Pattern');
+            background-attachment: scroll; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Стили для иконок инструментов */
+        .tool-icon {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.2); /* Фиолетовая тень */
+            border: 1px solid #a78bfa; /* Светло-фиолетовая рамка */
+            background-color: #ffffff; /* Белый фон */
+            color: #181824; /* Темный текст */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Навигация -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero-section" class="text-2xl font-black text-[#8b5cf6] tracking-wider transition duration-300 hover:text-[#6366f1]">THUMBNAIL PRO 2.0</a>
+            <div class="space-x-6 hidden sm:block">
+                <a href="#portfolio" class="text-gray-600 hover:text-[#8b5cf6] transition duration-200 font-medium">Портфолио</a>
+                <a href="#advantages" class="text-gray-600 hover:text-[#8b5cf6] transition duration-200 font-medium">Плюсы</a>
+                <a href="#about" class="text-gray-600 hover:text-[#8b5cf6] transition duration-200 font-medium">Обо мне</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#8b5cf6] transition duration-200 font-medium">Заказ</a>
+            </div>
+             <!-- Мобильное меню (Просто иконка для демонстрации) -->
+             <button class="sm:hidden text-gray-800 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6 text-[#8b5cf6]"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Секция Героя (Hero) -->
+    <header id="hero-section" class="pt-32 pb-40 flex items-center justify-center min-h-screen">
+        <div class="text-center max-w-5xl px-4">
+            <h1 class="text-6xl md:text-8xl font-extrabold leading-tight mb-8 text-gray-900 drop-shadow-lg">
+                ПЕРЕЗАГРУЗКА <span class="text-[#8b5cf6]">CTR</span>. <span class="text-[#6366f1]">ДИЗАЙН</span> 2.0.
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 text-gray-600 font-normal max-w-3xl mx-auto">
+                Я создаю не просто картинки, а мощный <span class="font-extrabold text-gray-800">маркетинговый инструмент</span> для вашего YouTube-канала, нацеленный на *исключительно высокий* кликрейт.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-5 sm:space-y-0 sm:space-x-8">
+                <a href="#contact" class="px-14 py-6 text-2xl font-black uppercase rounded-full shadow-2xl accent-gradient">
+                    ЗАКАЗАТЬ ПРЕМИУМ — <span class="text-yellow-200">700 ₽</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Секция Преимущества -->
+    <section id="advantages" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">ПОЧЕМУ ВЫБИРАЮТ ДИЗАЙН 2.0?</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <div class="bg-white p-10 rounded-2xl text-center border-t-8 border-[#8b5cf6] shadow-xl hover:shadow-violet-200 transition duration-300">
+                    <i data-lucide="award" class="w-12 h-12 text-[#8b5cf6] mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">ПРЕМИУМ-ОПЫТ</h3>
+                    <p class="text-gray-600">Более 3 лет создания контента, глубокое понимание психологии клика и трендов в дизайне.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl text-center border-t-8 border-[#6366f1] shadow-xl hover:shadow-indigo-200 transition duration-300">
+                    <i data-lucide="hard-hat" class="w-12 h-12 text-[#6366f1] mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">КОМПЛЕКСНЫЙ АРСЕНАЛ</h3>
+                    <p class="text-gray-600">Безупречное владение 2D (Photoshop) и 3D (Blender) для создания уникальных сцен и объектов.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-2xl text-center border-t-8 border-[#10b981] shadow-xl hover:shadow-emerald-200 transition duration-300">
+                    <i data-lucide="rocket" class="w-12 h-12 text-[#10b981] mx-auto mb-4"></i>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">СКОРОСТЬ & КАЧЕСТВО</h3>
+                    <p class="text-gray-600">Быстрое выполнение заказов (от 24 часов) с сохранением максимального качества и детализации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Обо мне и Инструменты -->
+    <section id="about" class="py-24 bg-[#f8fafc]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">ТЕХНОЛОГИИ, КОТОРЫЕ РАБОТАЮТ</h2>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                
+                <!-- Опыт -->
+                <div class="text-center md:text-left">
+                    <div class="text-7xl md:text-9xl font-extrabold text-[#8b5cf6] mb-4 tracking-tighter">
+                        3+
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-gray-900">Года на рынке, тысячи успешных превью</h3>
+                    <p class="text-gray-600 text-lg max-w-xl mx-auto md:mx-0">
+                        Моя цель — не просто выполнить заказ, а увеличить ваши показатели CTR. Каждый элемент превью направлен на <span class="font-bold text-violet-500">максимальное вовлечение зрителя</span>.
+                    </p>
+                </div>
+
+                <!-- Инструменты -->
+                <div class="flex justify-center md:justify-end space-x-10">
+                    
+                    <div class="tool-icon p-8 rounded-3xl text-center w-40 h-40 flex flex-col items-center justify-center shadow-lg">
+                        <!-- Иконка Photoshop -->
+                        <i data-lucide="monitor-dot" class="w-12 h-12 text-blue-600 mb-2"></i>
+                        <span class="text-xl font-semibold">Photoshop</span>
+                        <p class="text-sm text-gray-500">2D, ретушь, композиция</p>
+                    </div>
+
+                    <div class="tool-icon p-8 rounded-3xl text-center w-40 h-40 flex flex-col items-center justify-center shadow-lg">
+                        <!-- Иконка Blender -->
+                        <i data-lucide="box-select" class="w-12 h-12 text-orange-600 mb-2"></i>
+                        <span class="text-xl font-semibold">Blender</span>
+                        <p class="text-sm text-gray-500">3D-моделинг, сцены</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Портфолио -->
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">ПОРТФОЛИО: Клик-Ориентированный Дизайн</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Карточка работы 1 -->
+                <div class="portfolio-card rounded-2xl overflow-hidden">
+                    <!-- Плейсхолдер с фиолетовым акцентом -->
+                    <img src="https://placehold.co/600x338/ffffff/8b5cf6?text=VIOLET+Impact+Gaming" alt="Пример превью YouTube 1" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900">ИГРОВАЯ ТЕМАТИКА</h4>
+                        <p class="text-gray-600 text-sm mt-1">Динамичные сцены, эмоциональные лица и яркие фиолетовые акценты.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка работы 2 -->
+                <div class="portfolio-card rounded-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x338/ffffff/8b5cf6?text=VIOLET+News+Review" alt="Пример превью YouTube 2" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900">ОБЗОРЫ И НОВОСТИ</h4>
+                        <p class="text-gray-600 text-sm mt-1">Профессиональный, чистый коллаж, фокусировка на эксклюзиве. Гарантированный клик.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка работы 3 -->
+                <div class="portfolio-card rounded-2xl overflow-hidden">
+                    <img src="https://placehold.co/600x338/ffffff/8b5cf6?text=VIOLET+Tutorial+Tech" alt="Пример превью YouTube 3" class="w-full h-auto object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900">ОБУЧЕНИЕ И БИЗНЕС</h4>
+                        <p class="text-gray-600 text-sm mt-1">Свежий, внушающий доверие дизайн с минимальной, но броской инфографикой.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="px-10 py-4 text-lg font-semibold text-gray-700 rounded-full border-2 border-[#8b5cf6] hover:bg-[#8b5cf6]/10 transition duration-300 shadow-md">
+                    Увидеть полную галерею работ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция CTA/Контакты -->
+    <section id="contact" class="py-20 bg-[#f8fafc]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center p-12 rounded-3xl bg-white shadow-2xl border border-violet-300">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4">НАЧНИТЕ ЗАРАБАТЫВАТЬ БОЛЬШЕ СЕГОДНЯ!</h2>
+            <p class="text-gray-700 text-xl mb-10">
+                Премиум дизайн превью, нацеленный на CTR, всего за <span class="text-emerald-500 font-extrabold">700 ₽</span>. Не упустите свой шанс.
+            </p>
+            
+            <a href="mailto:your.email@example.com" class="inline-flex items-center justify-center px-14 py-6 text-2xl font-black uppercase rounded-full shadow-2xl accent-gradient">
+                НАПИСАТЬ МНЕ (БЫСТРЫЙ СТАРТ)
+                <i data-lucide="mail-plus" class="w-7 h-7 ml-3"></i>
+            </a>
+            <p class="text-sm text-gray-500 mt-6">
+                (Нажмите, чтобы отправить письмо или замените на ссылку на Telegram/VK)
+            </p>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="py-10 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            &copy; 2025 THUMBNAIL PRO 2.0. Ваш партнер по высокому CTR.
+        </div>
+    </footer>
+
+    <!-- JavaScript для инициализации иконок и логики -->
+    <script>
+        // 1. Инициализация иконок Lucide
+        lucide.createIcons();
+
+        // 2. Эффект параллакса в Hero-секции
+        const hero = document.getElementById('hero-section');
+        if (hero) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                // Легкий параллакс для фона
+                hero.style.backgroundPositionY = -(scrolled * 0.1) + 'px'; 
+            });
+        }
+    </script>
+</body>
+</html>
